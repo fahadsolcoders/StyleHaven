@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>StyleHaven - Interior Design Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>StyleHaven Interior Design</h1>
+        <p>Elevate Your Space with Timeless Designs</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home" onclick="showSection('home')">Home</a></li>
+            <li><a href="#portfolio" onclick="showSection('portfolio')">Portfolio</a></li>
+            <li><a href="#services" onclick="showSection('services')">Services</a></li>
+            <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+            <li><a href="#feedback" onclick="showSection('feedback')">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home" class="active">
+            <h2>Welcome to StyleHaven</h2>
+            <p>Transform your home with our expert interior design services. At StyleHaven, we believe that every space has the potential to tell a story, reflect your personality, and inspire joy. Our team of dedicated designers combines creativity with functionality to craft environments that are both beautiful and practical. Whether you're looking to revamp a single room or redesign your entire home, we offer tailored solutions to suit your unique style and needs.</p>
+            <p>With years of experience in the industry, StyleHaven has built a reputation for delivering exceptional designs that blend timeless elegance with modern innovation. From cozy living rooms to sophisticated bedrooms and functional kitchens, our portfolio showcases a diverse range of projects that highlight our commitment to quality and attention to detail. Explore our portfolio, discover our comprehensive services, or use our innovative Style Finder tool to get personalized design recommendations based on your location.</p>
+            <div class="media-container">
+                <video autoplay loop controls>
+                    <source src="lv_0_20250813120811.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="testimonials">
+                <h3>What Our Clients Say</h3>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"StyleHaven transformed our outdated living room into a modern masterpiece. Their attention to detail and understanding of our vision was unparalleled!"</p>
+                        <p class="client-name">– Sarah M., Homeowner</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Working with StyleHaven was a delight. They brought our dream bedroom to life with elegance and comfort we didn’t think was possible."</p>
+                        <p class="client-name">– James T., Client</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"The Style Finder tool helped us discover a design aesthetic that perfectly suits our coastal home. Highly recommend their personalized approach!"</p>
+                        <p class="client-name">– Emily R., Customer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-container">
+                <p>Ready to start your design journey? Let us bring your vision to life.</p>
+                <button onclick="showSection('contact')">Start Your Project Today</button>
+            </div>
+        </section>
+
+        <section id="portfolio" style="display: none;">
+            <h2>Our Portfolio</h2>
+            <div class="filter-sort">
+                <input type="text" id="portfolio-search" placeholder="Search projects...">
+                <select id="portfolio-filter">
+                    <option value="">All Styles</option>
+                </select>
+                <select id="portfolio-sort">
+                    <option value="name">Sort by Name</option>
+                    <option value="date">Sort by Date</option>
+                </select>
+            </div>
+            <div class="portfolio-grid" id="portfolio-list"></div>
+            <div id="portfolio-modal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span class="close-modal" onclick="closeModal()">&times;</span>
+                    <img id="modal-image" src="" alt="Project Image">
+                    <h3 id="modal-title"></h3>
+                    <p id="modal-style"></p>
+                    <p id="modal-date"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" style="display: none;">
+            <div class="services-hero">
+                <h2>Our Services</h2>
+                <p>At StyleHaven, we offer a comprehensive suite of interior design services tailored to bring your vision to life. From complete home transformations to specialized consultations, our expert team is dedicated to creating spaces that inspire and delight.</p>
+            </div>
+            <div class="services-grid" id="services-list"></div>
+            <div class="design-process">
+                <h3>Our Design Process</h3>
+                <p>Our approach to interior design is collaborative, transparent, and tailored to your needs. Here’s how we bring your vision to reality:</p>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <h4>1. Consultation</h4>
+                        <p>We begin with an in-depth consultation to understand your goals, preferences, and lifestyle. This helps us create a design plan that reflects your unique vision.</p>
+                    </div>
+                    <div class="process-step">
+                        <h4>2. Concept Development</h4>
+                        <p>Our team crafts a detailed design concept, including mood boards, color palettes, and layout plans, ensuring every detail aligns with your style.</p>
+                    </div>
+                    <div class="process-step">
+                        <h4>3. Implementation</h4>
+                        <p>From sourcing materials to managing contractors, we oversee every aspect of the project to ensure a seamless execution of the design plan.</p>
+                    </div>
+                    <div class="process-step">
+                        <h4>4. Final Reveal</h4>
+                        <p>We deliver a beautifully finished space, complete with styling and final touches, ready for you to enjoy and live in.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="client-benefits">
+                <h3>Why Choose StyleHaven?</h3>
+                <ul>
+                    <li><strong>Personalized Approach:</strong> Every project is tailored to your unique needs and aesthetic preferences.</li>
+                    <li><strong>Expert Team:</strong> Our designers bring years of experience and a passion for creating stunning spaces.</li>
+                    <li><strong>Quality Assurance:</strong> We use premium materials and work with trusted vendors to ensure lasting results.</li>
+                    <li><strong>Stress-Free Process:</strong> We handle every detail, from concept to completion, so you can enjoy the journey.</li>
+                </ul>
+                <div class="cta-container">
+                    <p>Ready to transform your space? Let’s create something extraordinary together.</p>
+                    <button onclick="showSection('contact')">Get Started Today</button>
+                </div>
+            </div>
+            <div class="faq-section">
+                <h3>Frequently Asked Questions</h3>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>How long does a typical project take?</h4>
+                        <p>Project timelines vary based on scope, but a single room makeover typically takes 4-8 weeks, while full home designs may take 3-6 months.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Do you work with small budgets?</h4>
+                        <p>Absolutely! We offer flexible solutions to suit a range of budgets, ensuring high-quality design without compromise.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Can I be involved in the design process?</h4>
+                        <p>We encourage client involvement! Our collaborative approach ensures your input shapes every stage of the project.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Do you offer virtual consultations?</h4>
+                        <p>Yes, we provide virtual consultations for clients worldwide, making it easy to start your project from anywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" style="display: none;">
+            <div class="contact-hero">
+                <h2>Contact Us</h2>
+                <p>Have questions or ready to start your project? We’d love to hear from you. Reach out to us using the details below or send us a message, and our team will get back to you promptly.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="icon">🏠</span>
+                        <div>
+                            <h3>Address</h3>
+                            <p>123 Harmony Lane, Serenity, California, 90210</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📞</span>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>555-123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">✉️</span>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@stylehaven.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Message</h3>
+                    <form id="contact-form">
+                        <input type="text" id="name" placeholder="Full Name" required>
+                        <input type="email" id="email" placeholder="Email" required>
+                        <textarea id="message" placeholder="Type your Message..." required></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="feedback" style="display: none;">
+            <div class="feedback-hero">
+                <h2>Share Your Feedback</h2>
+                <p>We value your input! Please share your thoughts, suggestions, or experiences with StyleHaven to help us improve and serve you better.</p>
+            </div>
+            <div class="feedback-form">
+                <form id="feedback-form">
+                    <input type="text" id="feedback-name" placeholder="Your Name" required>
+                    <input type="email" id="feedback-email" placeholder="Your Email" required>
+                    <select id="feedback-type" required>
+                        <option value="">Select Feedback Type</option>
+                        <option value="service">Service Quality</option>
+                        <option value="website">Website Experience</option>
+                        <option value="design">Design Suggestions</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <input type="number" id="feedback-rating" placeholder="Rating (1-5)" min="1" max="5" required>
+                    <input type="text" id="feedback-contact" placeholder="Preferred Contact Method (Optional)">
+                    <textarea id="feedback-text" placeholder="Your Feedback..." required></textarea>
+                    <button type="submit">Submit Feedback</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-section">
+            <div class="footer-info">
+                <h3>StyleHaven Interior Design</h3>
+                <p>123 Harmony Lane, Serenity, CA 90210</p>
+                <p>Phone: 555-123-4567</p>
+                <p>Email: info@stylehaven.com</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                    <li><a href="#portfolio" onclick="showSection('portfolio')">Portfolio</a></li>
+                    <li><a href="#services" onclick="showSection('services')">Services</a></li>
+                    <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+                    <li><a href="#feedback" onclick="showSection('feedback')">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><span class="icon">🌐</span></a>
+                    <a href="#" aria-label="Instagram"><span class="icon">📸</span></a>
+                    <a href="#" aria-label="Pinterest"><span class="icon">📌</span></a>
+                </div>
+                <p>&copy; 2025 StyleHaven Interior Design. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
